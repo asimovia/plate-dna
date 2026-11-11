@@ -1,6 +1,6 @@
 # Plate
 
-**Version 1.0.0** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
+**Version 1.0.1** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
 
 Plate is a **self-building capsule** of a piece of software. This repository
 holds no code. It holds [`plate.dna.yaml`](plate.dna.yaml), the app's DNA in a
@@ -13,7 +13,7 @@ Plate is a calorie and nutrition tracker:
 
 - **Photo or words:** take a photo of what you're eating or describe it in a
   sentence. An AI model estimates the calories, protein, carbohydrates, fat and
-  a 1–5 quality score.
+  a quality score from 1 to 5.
 - **Today:** see how much you have left against your goal.
 - **Trends:** charts for the last 30 days.
 - **Weekly review:** a review of how you ate in plain language.
@@ -59,7 +59,8 @@ who builds it.
 
 | Version | Changes |
 |---|---|
+| 1.0.1 | Plainer wording in the capsule comments and texts. |
 | 1.0.0 | First version of the capsule. |
 
 The version lives in `identity.version` inside the capsule. Every change gets
-a git tag (`v1.0.0`), so you can always rebuild a specific version.
+a git tag (`v1.0.1`), so you can always rebuild a specific version.

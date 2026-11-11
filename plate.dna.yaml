@@ -1,21 +1,20 @@
-# DNApps capsule — example. Spec: https://meshkore.com/dnapps
+# DNApps capsule. Spec: https://meshkore.com/dnapps
 # Hand this file to your coding agent:
 #   "Build the app described in plate.dna.yaml
-#    following https://meshkore.com/dnapps/spec.md — honour every fixed gene
-#    and adapt the rest to me."
+#    following the DNApps standard at https://meshkore.com/dnapps/spec.md"
 #
-# This capsule is a SPIN-OFF: the nutrition part of Evolvea (a personal
-# fitness PWA with gym, cycling, nutrition and an AI coach) extracted as its own
-# small app. In one screen-sized product it touches the camera, a vision
-# language model, the person's own API key, health data, offline storage,
-# charts, dictation, two languages and several output modalities.
+# Plate is the nutrition part of Evolvea, a personal fitness app with gym,
+# cycling, nutrition and an AI coach, split out as a small app of its own.
+# It's a good example because it uses a bit of everything: the camera, an AI
+# vision model with the person's own API key, health data, offline storage,
+# charts, dictation and two languages.
 appdna: "0.1"
 
 identity:
   id: "com.meshkore.examples.plate"
   name: "Plate"
   summary: "Photograph what you eat; a vision model estimates calories and macros, and you see each day and month against your goal."
-  version: "1.0.0"
+  version: "1.0.1"
   visibility: public
   license: MIT
   authors: [{ name: "MeshKore", contact: "https://meshkore.com/contact" }]
@@ -121,7 +120,7 @@ platforms:
   offline: { is: required, mode: fixed, why: "Meals are logged at the table, often with bad signal" }
 
   run:
-    is: "double-click index.html — no server, no build, no install"
+    is: "double-click index.html: no server, no build, no install"
     mode: fixed
     why: "Anyone must be able to try the result. So: classic <script> tags, no ES-module imports and no fetch of local files (both fail on file://). Camera, IndexedDB and the model API work from file://; install and the service worker activate only when served over https or localhost."
   serve: { is: "npx serve . (or any static server)", mode: preferred, why: "For the installable PWA" }
@@ -129,7 +128,7 @@ platforms:
 stack:
   language: { is: javascript, mode: adapt }
   framework:
-    is: "none — the web platform (Evolvea uses Alpine.js, no build step)"
+    is: "none, just the web platform (Evolvea uses Alpine.js with no build step)"
     mode: adapt
     why: "Keep the double-click run. A framework with a build (SolidJS, Astro…) is acceptable only if the built output still opens with a double-click."
     alternatives: [solidjs, astro, alpinejs]
@@ -187,7 +186,7 @@ experience:
 privacy:
   data_categories: [health, photos]
   stays_on: device
-  shared_with: ["the vision model provider the person chooses — only the meal photo/text being analysed"]
+  shared_with: ["the vision model provider the person chooses, and only the meal photo or text being analysed"]
   telemetry: none
   export: required
 
