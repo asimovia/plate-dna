@@ -1,11 +1,11 @@
 # Plate
 
-**Version 1.0.1** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
+**Version 1.0.2** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
 
-Plate is a **self-building capsule** of a piece of software. This repository
-holds no code. It holds [`plate.dna.yaml`](plate.dna.yaml), the app's DNA in a
-single text file. You give that file to a coding agent, and the agent writes
-the app for you, adapted to you.
+Plate comes as a **capsule**: a single text file that a coding agent builds the
+whole app from. There is no code in this repository, only
+[`plate.dna.yaml`](plate.dna.yaml), the app's DNA. You give it to your agent and
+it writes the app for you, adapted to you.
 
 ## What the app does
 
@@ -35,10 +35,11 @@ Build the app described in https://github.com/asimovia/plate-dna/blob/main/plate
 
 3. Open the `index.html` it creates.
 
-> The agent starts writing the code straight away. It may ask you about things
-> to personalise, such as language, design or which AI provider to use. Answer
-> them or let it decide: if you don't reply, it uses sensible defaults and
-> finishes on its own. When it's done, it saves every choice it made in
+> The agent starts writing the code right away. It may ask you about things to
+> personalize, such as language, design or which AI provider to use. Answer them
+> or let it decide: if you don't reply, it uses the defaults written in the
+> capsule (English and Spanish, your system's light or dark theme) and finishes
+> on its own. When it's done, it saves every choice it made in
 > `plate.dna.lock.yaml`.
 
 To estimate meals from photos you need an API key for an AI model with vision
@@ -59,8 +60,9 @@ who builds it.
 
 | Version | Changes |
 |---|---|
+| 1.0.2 | American spelling throughout. |
 | 1.0.1 | Plainer wording in the capsule comments and texts. |
 | 1.0.0 | First version of the capsule. |
 
 The version lives in `identity.version` inside the capsule. Every change gets
-a git tag (`v1.0.1`), so you can always rebuild a specific version.
+a git tag (`v1.0.2`), so you can always rebuild a specific version.
