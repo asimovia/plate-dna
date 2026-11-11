@@ -197,7 +197,7 @@ builder:
     languages: [en, es]
     theme: system
     goal: maintain
-    note: "When no builder profile is available, build with these defaults and the person changes them in settings. Never stop to ask: the capsule must build end-to-end without human input."
+    note: "If the person is present, the builder MAY ask about adapt/preferred genes (language, design, model provider). It MUST NOT block on an answer: without a profile or a reply it uses these defaults, finishes the build, and the person changes them later in settings. The capsule must build end-to-end without human input."
   deliverable: "A folder whose index.html opens the working app with a double-click, a README with the two ways to run it, and <name>.dna.lock.yaml"
 
 testing:
