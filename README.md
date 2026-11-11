@@ -1,6 +1,6 @@
 # Plate
 
-**Version 1.0.2** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
+**Version 1.1.0** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
 
 Plate comes as a **capsule**: a single text file that a coding agent builds the
 whole app from. There is no code in this repository, only
@@ -33,7 +33,7 @@ personal fitness app, split out on its own.
 Build the app described in https://github.com/asimovia/plate-dna/blob/main/plate.dna.yaml following the DNApps standard at https://meshkore.com/dnapps/spec.md
 ```
 
-3. Open the `index.html` it creates.
+3. Open the `index.html` it creates. To check the build, open `tests/index.html`.
 
 > The agent starts writing the code right away. It may ask you about things to
 > personalize, such as language, design or which AI provider to use. Answer them
@@ -60,9 +60,10 @@ who builds it.
 
 | Version | Changes |
 |---|---|
+| 1.1.0 | Required test harness (tests/index.html, one group per acceptance line, fake model provider), current model ids checked at build time, profile defaults, accessibility and translation checks. Found by the first unattended build. |
 | 1.0.2 | American spelling throughout. |
 | 1.0.1 | Plainer wording in the capsule comments and texts. |
 | 1.0.0 | First version of the capsule. |
 
 The version lives in `identity.version` inside the capsule. Every change gets
-a git tag (`v1.0.2`), so you can always rebuild a specific version.
+a git tag (`v1.1.0`), so you can always rebuild a specific version.
