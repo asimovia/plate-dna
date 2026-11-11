@@ -1,6 +1,6 @@
 # Plate
 
-**Version 1.2.2** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
+**Version 1.2.3** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
 
 Plate comes as a **capsule**: a single text file that a coding agent builds the
 whole app from. There is no code in this repository, only
@@ -60,6 +60,7 @@ who builds it.
 
 | Version | Changes |
 |---|---|
+| 1.2.3 | Checks on what a person sees or hears now run against the app itself: tests/index.html loads index.html in an iframe and inspects it after switching language and opening each screen. Comparing dictionaries doesn't count. The builder runs the tests over localhost so none of these are skipped. Found by the fifth build, which left English accessible names in the Spanish version while its language tests passed. Not yet verified by a fresh build. |
 | 1.2.2 | F9.3 now spells out the cache name: version plus a hash of the cached files. A new deliverable, tests/check-build.mjs, checks with node what the browser tests can't: that cache name, the capsule hash in the lock, and a source for every model marked checked. A browser test that can't run reports skipped, not pass. Hidden file inputs need an accessible name or must be out of the tab order. Found by the fourth build, whose own tests passed while all of these were wrong. The fifth build got all of them right; it missed English accessible names in the Spanish version. |
 | 1.2.1 | New acceptance line F9.3: an updated app never stays stuck on an old cached copy. Found while checking the third build. The fourth build (1.2.1) still missed the file hash in the cache name, so the line needs a sharper check. |
 | 1.2.0 | The translation and accessibility tests now spell out how to check: the whole rendered document, the navigation bar included. Model ids need a source in the lock. Found by the second unattended build, whose own tests passed with the navigation bar still in English. |
@@ -69,4 +70,4 @@ who builds it.
 | 1.0.0 | First version of the capsule. |
 
 The version lives in `identity.version` inside the capsule. Every change gets
-a git tag (`v1.2.2`), so you can always rebuild a specific version.
+a git tag (`v1.2.3`), so you can always rebuild a specific version.
