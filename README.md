@@ -60,7 +60,7 @@ who builds it.
 
 | Version | Changes |
 |---|---|
-| 1.2.1 | New acceptance line F9.3: an updated app never stays stuck on an old cached copy. Found while checking the third build. Not yet verified by a fresh build. |
+| 1.2.1 | New acceptance line F9.3: an updated app never stays stuck on an old cached copy. Found while checking the third build. The fourth build (1.2.1) still missed the file hash in the cache name, so the line needs a sharper check. |
 | 1.2.0 | The translation and accessibility tests now spell out how to check: the whole rendered document, the navigation bar included. Model ids need a source in the lock. Found by the second unattended build, whose own tests passed with the navigation bar still in English. |
 | 1.1.0 | Required test harness (tests/index.html, one group per acceptance line, fake model provider), current model ids checked at build time, profile defaults, accessibility and translation checks. Found by the first unattended build. |
 | 1.0.2 | American spelling throughout. |
