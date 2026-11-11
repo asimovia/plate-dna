@@ -1,6 +1,6 @@
 # Plate
 
-**Version 1.2.0** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
+**Version 1.2.1** · [DNApps](https://meshkore.com/dnapps) capsule, spec v0.1 · MIT
 
 Plate comes as a **capsule**: a single text file that a coding agent builds the
 whole app from. There is no code in this repository, only
@@ -60,6 +60,7 @@ who builds it.
 
 | Version | Changes |
 |---|---|
+| 1.2.1 | New acceptance line F9.3: an updated app never stays stuck on an old cached copy. Found while checking the third build. Not yet verified by a fresh build. |
 | 1.2.0 | The translation and accessibility tests now spell out how to check: the whole rendered document, the navigation bar included. Model ids need a source in the lock. Found by the second unattended build, whose own tests passed with the navigation bar still in English. |
 | 1.1.0 | Required test harness (tests/index.html, one group per acceptance line, fake model provider), current model ids checked at build time, profile defaults, accessibility and translation checks. Found by the first unattended build. |
 | 1.0.2 | American spelling throughout. |
@@ -67,4 +68,4 @@ who builds it.
 | 1.0.0 | First version of the capsule. |
 
 The version lives in `identity.version` inside the capsule. Every change gets
-a git tag (`v1.2.0`), so you can always rebuild a specific version.
+a git tag (`v1.2.1`), so you can always rebuild a specific version.

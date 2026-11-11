@@ -14,7 +14,7 @@ identity:
   id: "com.meshkore.examples.plate"
   name: "Plate"
   summary: "Photograph what you eat; a vision model estimates calories and macros, and you see each day and month against your goal."
-  version: "1.2.0"
+  version: "1.2.1"
   visibility: public
   license: MIT
   authors: [{ name: "MeshKore", contact: "https://meshkore.com/contact" }]
@@ -92,6 +92,7 @@ features:
     acceptance:
       - "GIVEN no connection WHEN the person logs a photo THEN it is saved and analyzed automatically once back online"
       - "GIVEN a supporting browser WHEN the person installs it THEN it runs from the home screen as a standalone app"
+      - "GIVEN a new version of the app is published WHEN the person opens it THEN the new version runs at the latest on the next launch, never an old copy forever: the service worker's cache name includes the capsule version and a hash of the app files"
 
 data:
   entities:
